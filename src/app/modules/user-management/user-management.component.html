@@ -1,0 +1,32 @@
+<div class="flex flex-col">
+<h1 class="text-3xl font-bold">User Management</h1>
+<div>
+      <nz-table #dataTable [nzData]="data" [nzBordered]="true" [nzSize]="'middle'">
+            <thead>
+                  <tr>
+                        <th nzWidth="50px">No</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  @for (user of data; track $index) {
+                  <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.role }}</td>
+                        <td class="flex gap-2">  
+                              <a nz-button nzType="primary" class="cursor-pointer" nzSize="small" (click)="editUser(user)">Edit</a>
+                              <a nz-button nzType="danger" class="cursor-pointer" nzSize="small"
+                                    (click)="deleteUser(user)">Delete</a>
+                        </td>
+                  </tr>
+                  }
+            </tbody>
+
+      </nz-table>
+</div>
+</div>

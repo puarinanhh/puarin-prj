@@ -1,6 +1,5 @@
 import { NzBackTopModule } from 'ng-zorro-antd/back-top';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
-import { NzNotificationService } from 'ng-zorro-antd/notification';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzAlertModule } from 'ng-zorro-antd/alert';
 import { NzTreeModule } from 'ng-zorro-antd/tree';
@@ -17,6 +16,7 @@ import { NgModule } from '@angular/core';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
+import { NzFormModule } from 'ng-zorro-antd/form';
 
 
 const components = [
@@ -36,7 +36,8 @@ const components = [
   NzRadioModule,
   NzSelectModule,
   NzSwitchModule,
-  NzTimePickerModule
+  NzTimePickerModule,
+  NzFormModule
 ]
 @NgModule({
     imports: components,
