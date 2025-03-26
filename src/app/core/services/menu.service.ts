@@ -13,7 +13,7 @@ private readonly menuList: MenuItem[] = [
   {
     title: 'Trang chủ',
     route: '/home',
-    icon: ''
+    icon: 'dashboard',
   },
   {
     title: 'Quản lý người dùng',
@@ -21,11 +21,7 @@ private readonly menuList: MenuItem[] = [
     children: [
       {
         title: 'Danh sách',
-        route: '/users'
-      },
-      {
-        title: 'Thêm mới người dùng',
-        route: '/users/add'
+        route: '/user'
       }
     ]
   }

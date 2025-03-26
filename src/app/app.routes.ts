@@ -4,5 +4,6 @@ import { HomeComponent } from './modules/home/home.component';
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
-  { path: 'users', loadChildren: () => import('./modules/user-management/user-management.routes').then(c => c.UserManagementRoutes) },
+  { path: 'user', loadChildren: () => import('./modules/user-management/user-management.module').then(c => c.UserManagementModule) },
+
 ];

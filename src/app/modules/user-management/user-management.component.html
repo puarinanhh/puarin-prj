@@ -1,5 +1,12 @@
 <div class="flex flex-col">
 <h1 class="text-3xl font-bold">User Management</h1>
+<div class="flex justify-end mb-4">
+      <button nz-button nzType="primary" [routerLink]="['create']">
+            <span nz-icon nzType="user-add"></span>
+            Create User
+      </button>
+</div>
+
 <div>
       <nz-table #dataTable [nzData]="data" [nzBordered]="true" [nzSize]="'middle'">
             <thead>
@@ -12,19 +19,19 @@
                   </tr>
             </thead>
             <tbody>
-                  @for (user of data; track $index) {
+                  @for (user of data; track data; let index = $index) {
                   <tr>
-                        <td>{{ $index + 1 }}</td>
-                        <td>{{ user.username }}</td>
-                        <td>{{ user.email }}</td>
-                        <td>{{ user.role }}</td>
-                        <td class="flex gap-2">  
-                              <a nz-button nzType="primary" class="cursor-pointer" nzSize="small" (click)="editUser(user)">Edit</a>
-                              <a nz-button nzType="danger" class="cursor-pointer" nzSize="small"
-                                    (click)="deleteUser(user)">Delete</a>
-                        </td>
+                              <td>{{ index + 1 }}</td>
+                              <td>{{ user.username }}</td>
+                              <td>{{ user.email }}</td>
+                              <td>{{ user.role }}</td>
+                              <td class="flex gap-2">
+                                    <!-- <a nz-button nzType="primary" class="cursor-pointer" nzSize="small" (click)="startEdit(user.id)">Edit</a> -->
+                                    <a nz-button nzType="danger" class="cursor-pointer" nzSize="small"
+                                          (click)="deleteUser(user)">Delete</a>
+                              </td>
                   </tr>
-                  }
+            }
             </tbody>
 
       </nz-table>

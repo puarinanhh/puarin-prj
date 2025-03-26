@@ -2,40 +2,35 @@ import { Component, DestroyRef, inject, OnInit, PLATFORM_ID } from '@angular/cor
 import { UserService } from './services/user.service';
 import { SharedModule } from '../../shared/shared.module';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
-
-
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-user-management',
   templateUrl: './user-management.component.html',
   styleUrls: ['./user-management.component.scss'],
-  imports: [SharedModule],
-  standalone: true,
+  standalone: false,
 })
 export class UserManagementComponent implements OnInit {
   data: any[] = [];
+  editCache: { [key: string]: { edit: boolean; data: any } } = {};
   constructor(
     private userService: UserService,
     private notification: NzNotificationService,
   ) { }
 
-  
+
   ngOnInit() {
     this.getUsersLst();
-
   }
 
   getUsersLst() {
     this.userService.getAll().subscribe({
-      next: (data: any) => { 
+      next: (data: any) => {
         this.data = data?.data;
       },
       error: (err) => { console.error('Lỗi getAll:', err); }
     })
-  }
-
-  editUser(user: any) {
-
   }
 
   deleteUser(user: any) {

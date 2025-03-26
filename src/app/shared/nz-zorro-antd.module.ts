@@ -17,6 +17,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
 import { NzFormModule } from 'ng-zorro-antd/form';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 
 const components = [
@@ -37,7 +38,8 @@ const components = [
   NzSelectModule,
   NzSwitchModule,
   NzTimePickerModule,
-  NzFormModule
+  NzFormModule,
+  NzIconModule,
 ]
 @NgModule({
     imports: components,
