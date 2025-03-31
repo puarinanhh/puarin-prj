@@ -13,7 +13,9 @@ import { RouterModule } from '@angular/router';
 })
 export class UserManagementComponent implements OnInit {
   data: any[] = [];
-  editCache: { [key: string]: { edit: boolean; data: any } } = {};
+  isModalVisible = false;
+  modalTitle = 'Create user'
+  selectedUserId?: string;
   constructor(
     private userService: UserService,
     private notification: NzNotificationService,
@@ -48,12 +50,28 @@ export class UserManagementComponent implements OnInit {
         this.notification.create(
           'error',
           'Thông báo',
-          'Xóa user thất bại!'
+          err
         );
       }
     })
   }
 
+  createUserModal() {
+    this.modalTitle = 'Create user',
+    this.selectedUserId = undefined;
+    this.isModalVisible = true;
+
+  }
+
+  editUser(id: string) {
+    this.modalTitle = 'Edit user';
+    this.selectedUserId = id;
+    this.isModalVisible = true;
+  }
+
+  handleCancel() {
+    this.isModalVisible = false;
+  }
 }
 
 

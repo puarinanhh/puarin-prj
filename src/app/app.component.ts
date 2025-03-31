@@ -1,26 +1,34 @@
 import {Component, OnInit} from '@angular/core';
-import {  RouterModule, RouterOutlet } from '@angular/router';
-import { NzIconModule } from 'ng-zorro-antd/icon';
+import { RouterModule, RouterOutlet, Router } from '@angular/router';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
 import {MenuItem, MenuService} from './core/services/menu.service';
+import { NzZorroAntdModule } from './shared/nz-zorro-antd.module';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NzIconModule, NzLayoutModule, NzMenuModule, RouterModule],
+  standalone: true,
+  imports: [RouterOutlet, NzZorroAntdModule ,NzLayoutModule,  RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   isCollapsed = false;
   menuLst: MenuItem[] = [];
   constructor(
-    private menuService: MenuService
+    private menuService: MenuService,
+    private router: Router
   ) {
   }
 
   ngOnInit() {
     this.menuLst = this.menuService.getMenu();
-  }
 
+    // Handle route restoration
+    if (window.history.state && window.history.state.navigationId) {
+      const currentUrl = window.location.pathname;
+      if (currentUrl !== '/') {
+        this.router.navigateByUrl(currentUrl, { replaceUrl: true });
+      }
+    }
+  }
 }

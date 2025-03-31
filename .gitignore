@@ -20,6 +20,13 @@ yarn-error.log
 .settings/
 *.sublime-workspace
 
+
+# Bỏ qua file môi trường
+.env
+.env.development
+.env.production
+
+
 # Visual Studio Code
 .vscode/*
 !.vscode/settings.json

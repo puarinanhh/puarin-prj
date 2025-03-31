@@ -18,7 +18,8 @@ import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { NzTimePickerModule } from 'ng-zorro-antd/time-picker';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 const components = [
   NzBackTopModule,
@@ -40,6 +41,8 @@ const components = [
   NzTimePickerModule,
   NzFormModule,
   NzIconModule,
+  NzButtonModule,
+  NzMenuModule
 ]
 @NgModule({
     imports: components,
