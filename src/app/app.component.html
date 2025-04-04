@@ -12,7 +12,7 @@
       </a>
     </div>
     @if (menuLst && menuLst.length > 0) {
-    <ul nz-menu nzTheme="dark" nzMode="inline"  [nzInlineCollapsed]="isCollapsed">
+    <ul nz-menu nzTheme="dark" nzMode="inline" nzInlineCollapsed [nzInlineCollapsed]="isCollapsed">
       @for (item of menuLst; track item) {
         <li nz-submenu nzOpen [nzTitle]="item.title" [nzIcon]="item.icon ?? ''">
           @if (item.children && item.children.length > 0) {
