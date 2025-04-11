@@ -16,6 +16,6 @@ import { FormUserComponent } from "./components/form-user.component";
     FormUserComponent,
   ],
   imports: [SharedModule, EffectsModule.forFeature([UserEffects]), StoreModule.forFeature('user', userReducer),
-          FormsModule, ReactiveFormsModule, RouterModule, RouterModule.forChild(UserManagementRoutes)]
+    FormsModule, ReactiveFormsModule, RouterModule, RouterModule.forChild(UserManagementRoutes)]
 })
 export class UserManagementModule {}

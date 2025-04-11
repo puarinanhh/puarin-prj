@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
     private router: Router
   ) {
   }
-
   ngOnInit() {
     this.menuLst = this.menuService.getMenu();
 

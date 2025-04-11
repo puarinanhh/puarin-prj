@@ -1,9 +1,6 @@
-import { Component, DestroyRef, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from './services/user.service';
-import { SharedModule } from '../../shared/shared.module';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-user-management',
