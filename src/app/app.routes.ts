@@ -5,10 +5,10 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/home'
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path: 'home',
+    path: 'dashboard',
     component: HomeComponent
   },
   { path: 'user', loadChildren: () => import('./modules/user-management/user-management.module').then(c => c.UserManagementModule) },
