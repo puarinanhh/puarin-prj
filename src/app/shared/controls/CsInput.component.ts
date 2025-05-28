@@ -4,7 +4,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 @Component({
   selector: 'cs-input',
   template: `
-    <input type="text"  (change)="onInputChange($event)" (blur)="onTouched()" nz-input>
+    <input type="text" [placeholder]="placeholder"  (change)="onInputChange($event)" (blur)="onTouched()" nz-input>
   `,
   styles: [],
   standalone: false,
@@ -17,13 +17,13 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
   ],
 })
 export class CsInputComponent implements ControlValueAccessor{
-  innerValue = false;
+  innerValue = '';
   @Input() disabled = false;
+  @Input() placeholder = '';
 
 
-  private onChange: (value: boolean) => void = () => {};
-  protected onTouched: () => void = () => {};
-
+  onChange = (_: any) => {};
+  onTouched = () => {};
 
   registerOnChange(fn: any): void {
     this.onChange = fn;
@@ -34,7 +34,7 @@ export class CsInputComponent implements ControlValueAccessor{
   }
 
   writeValue(obj: any): void {
-    this.innerValue = !!obj;
+    this.innerValue = obj || '';  
   }
 
   setDisabledState(isDisabled: boolean): void {
@@ -42,8 +42,8 @@ export class CsInputComponent implements ControlValueAccessor{
   }
 
   onInputChange(event: Event) {
-    const checked = (event.target as HTMLInputElement).checked;
-    this.innerValue = checked;
+    const value = (event.target as HTMLInputElement).value;
+    this.innerValue = value;
     this.onChange(this.innerValue);
   }
 }
