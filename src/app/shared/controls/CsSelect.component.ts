@@ -4,7 +4,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 @Component({
   selector: 'cs-select',
   template: `
-    <nz-select [nzMode]="mode" [nzDisabled]="disabled" [nzAllowClear]="showAllowClear" (change)="onChange($event)">
+    <nz-select [nzMode]="mode" [nzDisabled]="disabled" [nzAllowClear]="showAllowClear" [ngModel]="innerValue" (ngModelChange)="onChange($event)">
       <ng-container *ngFor="let item of options">
         <nz-option [nzValue]="item.value" [nzLabel]="item.label"></nz-option>
       </ng-container>
@@ -41,7 +41,7 @@ export class CsSelectComponent implements ControlValueAccessor{
   }
 
   writeValue(obj: any): void {
-    this.innerValue = !!obj;
+    this.innerValue = obj;
   }
 
   setDisabledState(isDisabled: boolean): void {

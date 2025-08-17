@@ -9,7 +9,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NzLayoutModule,  RouterModule, NzIconModule, NzMenuModule,  ],
+  imports: [RouterOutlet,NzLayoutModule,  RouterModule, NzIconModule, NzMenuModule ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -22,14 +22,6 @@ export class AppComponent implements OnInit {
   ) {
   }
   ngOnInit() {
-    this.menuLst = this.menuService.getMenu();
 
-    // Handle route restoration
-    if (window.history.state && window.history.state.navigationId) {
-      const currentUrl = window.location.pathname;
-      if (currentUrl !== '/') {
-        this.router.navigateByUrl(currentUrl, { replaceUrl: true });
-      }
-    }
   }
 }
