@@ -1,0 +1,155 @@
+// ============================================
+// TYPOGRAPHY STYLES
+// ============================================
+
+// === GOOGLE FONTS IMPORT ===
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+// === BASE TYPOGRAPHY ===
+body {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// === HEADINGS ===
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+h1, .h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
+}
+
+h2, .h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+}
+
+h3, .h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+h4, .h4 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 600;
+}
+
+h5, .h5 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+// === PARAGRAPH ===
+p {
+  margin-bottom: 1rem;
+}
+
+// === LINKS ===
+a {
+  color: #00f5ff;
+  text-decoration: none;
+  transition: color 0.15s ease, text-shadow 0.15s ease;
+
+  &:hover {
+    color: #67e8f9;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.8), 0 0 20px rgba(0, 245, 255, 0.5);
+  }
+}
+
+// === CODE ===
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+code {
+  padding: 0.2em 0.4em;
+  background: rgba(191, 0, 255, 0.1);
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #d946ef;
+}
+
+pre {
+  padding: 1.5rem;
+  background: #12121a;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid rgba(191, 0, 255, 0.3);
+
+  code {
+    padding: 0;
+    background: transparent;
+  }
+}
+
+// === FONT FAMILIES ===
+.font-cyber {
+  font-family: 'Orbitron', monospace;
+}
+
+.font-body {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+// === TEXT COLORS ===
+.text-neon-cyan {
+  color: #00f5ff;
+}
+
+.text-neon-purple {
+  color: #bf00ff;
+}
+
+.text-neon-pink {
+  color: #ff0080;
+}
+
+// === TEXT GRADIENT ===
+.text-gradient {
+  background: linear-gradient(90deg, #bf00ff 0%, #00f5ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple-cyan {
+  background: linear-gradient(90deg, #bf00ff 0%, #00f5ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan-pink {
+  background: linear-gradient(90deg, #00f5ff 0%, #ff0080 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// === TEXT GLOW ===
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 245, 255, 0.8), 0 0 20px rgba(0, 245, 255, 0.5), 0 0 30px rgba(0, 245, 255, 0.3);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(191, 0, 255, 0.8), 0 0 20px rgba(191, 0, 255, 0.5), 0 0 30px rgba(191, 0, 255, 0.3);
+}

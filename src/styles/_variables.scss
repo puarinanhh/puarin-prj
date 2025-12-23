@@ -1,0 +1,69 @@
+// ============================================
+// CYBERPUNK ANIME PORTFOLIO - DESIGN TOKENS
+// ============================================
+
+// === BACKGROUND COLORS ===
+$bg-primary: #0a0a0f;
+$bg-secondary: #12121a;
+$bg-tertiary: #1a1a2e;
+$bg-card: #12121a;
+$bg-card-hover: #1a1a2e;
+
+// === NEON ACCENT COLORS ===
+$neon-purple: #bf00ff;
+$neon-purple-light: #d946ef;
+$neon-purple-dark: #9000cc;
+$neon-cyan: #00f5ff;
+$neon-cyan-light: #67e8f9;
+$neon-cyan-dark: #00c4cc;
+$neon-pink: #ff0080;
+$neon-blue: #0ea5e9;
+$neon-green: #39ff14;
+
+// === TEXT COLORS ===
+$text-primary: #ffffff;
+$text-secondary: #a1a1aa;
+$text-muted: #71717a;
+$text-accent: $neon-cyan;
+
+// === GLOW EFFECTS ===
+$glow-purple: 0 0 20px rgba(191, 0, 255, 0.5), 0 0 40px rgba(191, 0, 255, 0.3);
+$glow-cyan: 0 0 20px rgba(0, 245, 255, 0.5), 0 0 40px rgba(0, 245, 255, 0.3);
+$glow-pink: 0 0 20px rgba(255, 0, 128, 0.5), 0 0 40px rgba(255, 0, 128, 0.3);
+$glow-text-cyan: 0 0 10px rgba(0, 245, 255, 0.8), 0 0 20px rgba(0, 245, 255, 0.5), 0 0 30px rgba(0, 245, 255, 0.3);
+$glow-text-purple: 0 0 10px rgba(191, 0, 255, 0.8), 0 0 20px rgba(191, 0, 255, 0.5), 0 0 30px rgba(191, 0, 255, 0.3);
+
+// === BORDERS ===
+$border-subtle: 1px solid rgba(255, 255, 255, 0.1);
+$border-neon-cyan: 1px solid rgba(0, 245, 255, 0.3);
+$border-neon-purple: 1px solid rgba(191, 0, 255, 0.3);
+
+// === TRANSITIONS ===
+$transition-fast: 0.15s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+$transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// === BREAKPOINTS ===
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// === Z-INDEX LAYERS ===
+$z-background: -1;
+$z-default: 1;
+$z-dropdown: 10;
+$z-sticky: 20;
+$z-fixed: 30;
+$z-modal-backdrop: 40;
+$z-modal: 50;
+$z-tooltip: 60;
+$z-cursor: 9999;
+
+// === SPACING ===
+$section-padding-y: 6rem;
+$section-padding-y-mobile: 4rem;
+$container-max-width: 1200px;
+$container-padding: 1.5rem;

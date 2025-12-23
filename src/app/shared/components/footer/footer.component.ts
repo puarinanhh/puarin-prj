@@ -1,0 +1,182 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+interface SocialLink {
+  name: string;
+  url: string;
+  icon: string;
+}
+
+@Component({
+  selector: 'app-footer',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Social Links -->
+        <div class="footer__social">
+          <a
+            *ngFor="let social of socialLinks"
+            [href]="social.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer__social-link"
+            [attr.aria-label]="social.name"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" [innerHTML]="social.icon"></svg>
+          </a>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer__divider"></div>
+
+        <!-- Copyright -->
+        <div class="footer__copyright">
+          <p>
+            <span class="highlight">&lt;</span>
+            Designed & Built by
+            <span class="highlight">PUARIN</span>
+            <span class="highlight">/&gt;</span>
+          </p>
+          <p class="year">{{ currentYear }}</p>
+        </div>
+
+        <!-- Scroll to top -->
+        <button class="footer__scroll-top" (click)="scrollToTop()" aria-label="Scroll to top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+          </svg>
+        </button>
+      </div>
+    </footer>
+  `,
+  styles: [`
+    .footer {
+      background: #0a0a0f;
+      border-top: 1px solid rgba(0, 245, 255, 0.1);
+      padding: 3rem 0;
+      position: relative;
+    }
+
+    .footer__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer__social-link {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a1a1aa;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        color: #00f5ff;
+        border-color: #00f5ff;
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+      }
+    }
+
+    .footer__divider {
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+    }
+
+    .footer__copyright {
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      color: #71717a;
+
+      .highlight {
+        color: #00f5ff;
+      }
+
+      .year {
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        color: #52525b;
+      }
+    }
+
+    .footer__scroll-top {
+      position: absolute;
+      right: 2rem;
+      bottom: 2rem;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 245, 255, 0.1);
+      border: 1px solid rgba(0, 245, 255, 0.3);
+      border-radius: 50%;
+      color: #00f5ff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        background: rgba(0, 245, 255, 0.2);
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+      }
+    }
+  `]
+})
+export class FooterComponent {
+  currentYear = new Date().getFullYear();
+
+  socialLinks: SocialLink[] = [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/puarin',
+      icon: '<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>'
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://linkedin.com/in/puarin',
+      icon: '<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>'
+    },
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/puarin',
+      icon: '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>'
+    },
+    {
+      name: 'Email',
+      url: 'mailto:contact@puarin.dev',
+      icon: '<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>'
+    }
+  ];
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}

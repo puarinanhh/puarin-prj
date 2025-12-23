@@ -1,35 +1,34 @@
-import {Component, OnInit} from '@angular/core';
-import { RouterModule, RouterOutlet, Router } from '@angular/router';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import {MenuItem, MenuService} from './core/services/menu.service';
-import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
-
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NzLayoutModule,  RouterModule, NzIconModule, NzMenuModule,  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-})
-export class AppComponent implements OnInit {
-  isCollapsed = false;
-  menuLst: MenuItem[] = [];
-  constructor(
-    private menuService: MenuService,
-    private router: Router
-  ) {
-  }
-  ngOnInit() {
-    this.menuLst = this.menuService.getMenu();
+  imports: [RouterOutlet, NavbarComponent, FooterComponent],
+  template: `
+    <!-- Cyber Grid Background -->
+    <div class="cyber-grid-bg"></div>
 
-    // Handle route restoration
-    if (window.history.state && window.history.state.navigationId) {
-      const currentUrl = window.location.pathname;
-      if (currentUrl !== '/') {
-        this.router.navigateByUrl(currentUrl, { replaceUrl: true });
-      }
+    <!-- Scan Line Effect -->
+    <div class="scan-line-overlay"></div>
+
+    <!-- Navigation -->
+    <app-navbar></app-navbar>
+
+    <!-- Main Content -->
+    <router-outlet></router-outlet>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+  `,
+  styles: [`
+    :host {
+      display: block;
+      min-height: 100vh;
+      position: relative;
     }
-  }
-}
+  `]
+})
+export class AppComponent {}

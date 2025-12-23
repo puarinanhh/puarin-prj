@@ -1,0 +1,150 @@
+// ============================================
+// SCSS MIXINS
+// ============================================
+
+@use 'variables' as *;
+
+// === RESPONSIVE BREAKPOINTS ===
+@mixin sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: $breakpoint-2xl) {
+    @content;
+  }
+}
+
+// === NEON GLOW EFFECTS ===
+@mixin neon-glow($color: $neon-cyan, $intensity: 1) {
+  box-shadow:
+    0 0 calc(10px * #{$intensity}) rgba($color, 0.4),
+    0 0 calc(20px * #{$intensity}) rgba($color, 0.3),
+    0 0 calc(40px * #{$intensity}) rgba($color, 0.2);
+}
+
+@mixin neon-text-glow($color: $neon-cyan) {
+  text-shadow:
+    0 0 10px rgba($color, 0.8),
+    0 0 20px rgba($color, 0.5),
+    0 0 30px rgba($color, 0.3);
+}
+
+@mixin neon-border($color: $neon-cyan, $width: 1px) {
+  border: $width solid rgba($color, 0.5);
+  box-shadow:
+    inset 0 0 10px rgba($color, 0.1),
+    0 0 10px rgba($color, 0.2);
+}
+
+// === GLASSMORPHISM ===
+@mixin glass($blur: 10px, $opacity: 0.1) {
+  background: rgba($bg-secondary, $opacity);
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}
+
+// === FLEX UTILITIES ===
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// === ABSOLUTE POSITIONING ===
+@mixin absolute-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// === TEXT GRADIENT ===
+@mixin text-gradient($gradient: linear-gradient(90deg, $neon-purple 0%, $neon-cyan 100%)) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// === HOVER LIFT EFFECT ===
+@mixin hover-lift($distance: -5px) {
+  transition: transform $transition-normal, box-shadow $transition-normal;
+
+  &:hover {
+    transform: translateY($distance);
+  }
+}
+
+// === SCROLLBAR STYLING ===
+@mixin custom-scrollbar($width: 8px, $track-color: $bg-secondary, $thumb-color: $neon-cyan) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($thumb-color, 0.5);
+    border-radius: $width / 2;
+
+    &:hover {
+      background: rgba($thumb-color, 0.7);
+    }
+  }
+}
+
+// === TRUNCATE TEXT ===
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
