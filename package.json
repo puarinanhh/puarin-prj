@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:puarin-prj": "node dist/puarin-prj/server/server.mjs",
-    "deploy": "ng build --configuration production --base-href /puarin-prj/ && npx angular-cli-ghpages --dir=dist/puarin-prj/browser"
+    "deploy": "ng build --configuration production --base-href / && copy dist\\puarin-prj\\browser\\index.html dist\\puarin-prj\\browser\\404.html && npx angular-cli-ghpages --dir=dist/puarin-prj/browser"
+
   },
   "private": true,
   "dependencies": {
