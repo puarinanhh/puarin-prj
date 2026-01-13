@@ -1,17 +1,20 @@
 // ============================================
 // CYBERPUNK ANIME PORTFOLIO - MAIN STYLES
 // ============================================
-
 // === DESIGN SYSTEM (MUST BE FIRST) ===
 @use 'styles/variables' as *;
 @use 'styles/mixins' as *;
 
 // === TAILWIND ===
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 // === ANIMATIONS & TYPOGRAPHY ===
 @import 'styles/animations';
 @import 'styles/typography';
+
+
 
 // === CSS RESET & BASE ===
 *,
