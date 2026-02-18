@@ -1,42 +1,42 @@
 // ============================================
-// CYBERPUNK ANIME PORTFOLIO - DESIGN TOKENS
+// RETRO PORTFOLIO - DESIGN TOKENS
 // ============================================
 
 // === BACKGROUND COLORS ===
-$bg-primary: #0a0a0f;
-$bg-secondary: #12121a;
-$bg-tertiary: #1a1a2e;
-$bg-card: #12121a;
-$bg-card-hover: #1a1a2e;
+$bg-primary: #0f1f1d;
+$bg-secondary: #162b28;
+$bg-tertiary: #223834;
+$bg-card: #162b28;
+$bg-card-hover: #223834;
 
 // === NEON ACCENT COLORS ===
-$neon-purple: #bf00ff;
-$neon-purple-light: #d946ef;
-$neon-purple-dark: #9000cc;
-$neon-cyan: #00f5ff;
-$neon-cyan-light: #67e8f9;
-$neon-cyan-dark: #00c4cc;
-$neon-pink: #ff0080;
-$neon-blue: #0ea5e9;
-$neon-green: #39ff14;
+$neon-purple: #6ec2a8;
+$neon-purple-light: #8fd8c4;
+$neon-purple-dark: #3f8f79;
+$neon-cyan: #b8ffe6;
+$neon-cyan-light: #dffff3;
+$neon-cyan-dark: #8edec5;
+$neon-pink: #7ab8a2;
+$neon-blue: #7fb9c9;
+$neon-green: #9ad7b0;
 
 // === TEXT COLORS ===
-$text-primary: #ffffff;
-$text-secondary: #a1a1aa;
-$text-muted: #71717a;
+$text-primary: #eafff7;
+$text-secondary: #b6d8cc;
+$text-muted: #6f9388;
 $text-accent: $neon-cyan;
 
 // === GLOW EFFECTS ===
-$glow-purple: 0 0 20px rgba(191, 0, 255, 0.5), 0 0 40px rgba(191, 0, 255, 0.3);
-$glow-cyan: 0 0 20px rgba(0, 245, 255, 0.5), 0 0 40px rgba(0, 245, 255, 0.3);
-$glow-pink: 0 0 20px rgba(255, 0, 128, 0.5), 0 0 40px rgba(255, 0, 128, 0.3);
-$glow-text-cyan: 0 0 10px rgba(0, 245, 255, 0.8), 0 0 20px rgba(0, 245, 255, 0.5), 0 0 30px rgba(0, 245, 255, 0.3);
-$glow-text-purple: 0 0 10px rgba(191, 0, 255, 0.8), 0 0 20px rgba(191, 0, 255, 0.5), 0 0 30px rgba(191, 0, 255, 0.3);
+$glow-purple: 0 0 16px rgba(110, 194, 168, 0.4), 0 0 32px rgba(110, 194, 168, 0.2);
+$glow-cyan: 0 0 16px rgba(184, 255, 230, 0.35), 0 0 28px rgba(184, 255, 230, 0.22);
+$glow-pink: 0 0 16px rgba(122, 184, 162, 0.35), 0 0 28px rgba(122, 184, 162, 0.2);
+$glow-text-cyan: 0 0 8px rgba(184, 255, 230, 0.65), 0 0 16px rgba(184, 255, 230, 0.4);
+$glow-text-purple: 0 0 8px rgba(110, 194, 168, 0.6), 0 0 14px rgba(110, 194, 168, 0.35);
 
 // === BORDERS ===
 $border-subtle: 1px solid rgba(255, 255, 255, 0.1);
-$border-neon-cyan: 1px solid rgba(0, 245, 255, 0.3);
-$border-neon-purple: 1px solid rgba(191, 0, 255, 0.3);
+$border-neon-cyan: 1px solid rgba(184, 255, 230, 0.35);
+$border-neon-purple: 1px solid rgba(110, 194, 168, 0.35);
 
 // === TRANSITIONS ===
 $transition-fast: 0.15s ease;

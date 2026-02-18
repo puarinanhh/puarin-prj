@@ -53,8 +53,8 @@ interface SocialLink {
   `,
   styles: [`
     .footer {
-      background: #0a0a0f;
-      border-top: 1px solid rgba(0, 245, 255, 0.1);
+      background: #0f1f1d;
+      border-top: 1px solid rgba(184, 255, 230, 0.1);
       padding: 3rem 0;
       position: relative;
     }
@@ -80,7 +80,7 @@ interface SocialLink {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #a1a1aa;
+      color: #b6d8cc;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 50%;
       transition: all 0.3s ease;
@@ -91,27 +91,27 @@ interface SocialLink {
       }
 
       &:hover {
-        color: #00f5ff;
-        border-color: #00f5ff;
+        color: #b8ffe6;
+        border-color: #b8ffe6;
         transform: translateY(-3px);
-        box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        box-shadow: 0 0 20px rgba(184, 255, 230, 0.3);
       }
     }
 
     .footer__divider {
       width: 100px;
       height: 2px;
-      background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+      background: linear-gradient(90deg, transparent, #b8ffe6, transparent);
     }
 
     .footer__copyright {
       text-align: center;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Courier Prime', monospace;
       font-size: 0.875rem;
-      color: #71717a;
+      color: #6f9388;
 
       .highlight {
-        color: #00f5ff;
+        color: #b8ffe6;
       }
 
       .year {
@@ -130,10 +130,10 @@ interface SocialLink {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(0, 245, 255, 0.1);
-      border: 1px solid rgba(0, 245, 255, 0.3);
+      background: rgba(184, 255, 230, 0.1);
+      border: 1px solid rgba(184, 255, 230, 0.3);
       border-radius: 50%;
-      color: #00f5ff;
+      color: #b8ffe6;
       cursor: pointer;
       transition: all 0.3s ease;
 
@@ -143,9 +143,9 @@ interface SocialLink {
       }
 
       &:hover {
-        background: rgba(0, 245, 255, 0.2);
+        background: rgba(184, 255, 230, 0.2);
         transform: translateY(-3px);
-        box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+        box-shadow: 0 0 20px rgba(184, 255, 230, 0.3);
       }
     }
   `]

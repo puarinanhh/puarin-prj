@@ -149,7 +149,7 @@ interface ContactInfo {
   `,
   styles: [`
     .contact {
-      background: #0a0a0f;
+      background: #0f1f1d;
       position: relative;
     }
 
@@ -171,14 +171,14 @@ interface ContactInfo {
 
     .contact__info {
       h3 {
-        font-family: 'Orbitron', monospace;
+        font-family: 'Bebas Neue', monospace;
         font-size: 1.5rem;
         color: white;
         margin-bottom: 1rem;
       }
 
       > p {
-        color: #a1a1aa;
+        color: #b6d8cc;
         line-height: 1.7;
         margin-bottom: 2rem;
       }
@@ -200,10 +200,10 @@ interface ContactInfo {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: rgba(0, 245, 255, 0.1);
-          border: 1px solid rgba(0, 245, 255, 0.2);
+          background: rgba(184, 255, 230, 0.1);
+          border: 1px solid rgba(184, 255, 230, 0.2);
           border-radius: 10px;
-          color: #00f5ff;
+          color: #b8ffe6;
           flex-shrink: 0;
 
           :host ::ng-deep svg {
@@ -221,7 +221,7 @@ interface ContactInfo {
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: #71717a;
+            color: #6f9388;
           }
 
           .info-value {
@@ -231,7 +231,7 @@ interface ContactInfo {
             transition: color 0.3s ease;
 
             &:hover {
-              color: #00f5ff;
+              color: #b8ffe6;
             }
           }
         }
@@ -245,7 +245,7 @@ interface ContactInfo {
       .deco-circle {
         width: 100px;
         height: 100px;
-        border: 2px solid rgba(191, 0, 255, 0.2);
+        border: 2px solid rgba(110, 194, 168, 0.2);
         border-radius: 50%;
         position: absolute;
         top: 0;
@@ -256,7 +256,7 @@ interface ContactInfo {
       .deco-line {
         width: 150px;
         height: 2px;
-        background: linear-gradient(90deg, #bf00ff, transparent);
+        background: linear-gradient(90deg, #6ec2a8, transparent);
         position: absolute;
         top: 50px;
         left: 30px;
@@ -281,12 +281,12 @@ interface ContactInfo {
         gap: 0.5rem;
 
         label {
-          font-family: 'Rajdhani', sans-serif;
+          font-family: 'PT Sans', sans-serif;
           font-size: 0.9rem;
           font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          color: #a1a1aa;
+          color: #b6d8cc;
         }
 
         input,
@@ -296,7 +296,7 @@ interface ContactInfo {
           border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 8px;
           color: white;
-          font-family: 'Rajdhani', sans-serif;
+          font-family: 'PT Sans', sans-serif;
           font-size: 1rem;
           transition: all 0.3s ease;
 
@@ -306,12 +306,12 @@ interface ContactInfo {
 
           &:focus {
             outline: none;
-            border-color: #00f5ff;
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.1);
+            border-color: #b8ffe6;
+            box-shadow: 0 0 20px rgba(184, 255, 230, 0.1);
           }
 
           &.error {
-            border-color: #ff0080;
+            border-color: #7ab8a2;
           }
         }
 
@@ -322,7 +322,7 @@ interface ContactInfo {
 
         .error-message {
           font-size: 0.8rem;
-          color: #ff0080;
+          color: #7ab8a2;
         }
       }
 
@@ -339,13 +339,13 @@ interface ContactInfo {
         &.success {
           background: rgba(57, 255, 20, 0.1);
           border: 1px solid rgba(57, 255, 20, 0.3);
-          color: #39ff14;
+          color: #9ad7b0;
         }
 
         &.error {
-          background: rgba(255, 0, 128, 0.1);
-          border: 1px solid rgba(255, 0, 128, 0.3);
-          color: #ff0080;
+          background: rgba(122, 184, 162, 0.1);
+          border: 1px solid rgba(122, 184, 162, 0.3);
+          color: #7ab8a2;
         }
       }
     }

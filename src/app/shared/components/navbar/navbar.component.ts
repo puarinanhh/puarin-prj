@@ -81,10 +81,10 @@ interface NavItem {
       transition: all 0.3s ease;
 
       &--scrolled {
-        background: rgba(10, 10, 15, 0.9);
+        background: rgba(15, 31, 29, 0.9);
         backdrop-filter: blur(10px);
         padding: 0.75rem 0;
-        box-shadow: 0 0 30px rgba(0, 245, 255, 0.1);
+        box-shadow: 0 0 30px rgba(184, 255, 230, 0.1);
       }
 
       &--hidden {
@@ -108,18 +108,18 @@ interface NavItem {
       text-decoration: none;
 
       .logo-text {
-        font-family: 'Orbitron', monospace;
+        font-family: 'Bebas Neue', monospace;
         font-size: 1.5rem;
         font-weight: 700;
-        color: #00f5ff;
+        color: #b8ffe6;
         letter-spacing: 0.1em;
-        text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+        text-shadow: 0 0 10px rgba(184, 255, 230, 0.5);
       }
 
       .logo-dot {
         width: 8px;
         height: 8px;
-        background: #bf00ff;
+        background: #6ec2a8;
         border-radius: 50%;
         animation: pulse 2s ease-in-out infinite;
       }
@@ -136,12 +136,12 @@ interface NavItem {
     }
 
     .navbar__link {
-      font-family: 'Rajdhani', sans-serif;
+      font-family: 'PT Sans', sans-serif;
       font-size: 0.9rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: #a1a1aa;
+      color: #b6d8cc;
       text-decoration: none;
       padding: 0.5rem 0;
       position: relative;
@@ -154,13 +154,13 @@ interface NavItem {
         left: 0;
         width: 0;
         height: 2px;
-        background: linear-gradient(90deg, #bf00ff 0%, #00f5ff 100%);
+        background: linear-gradient(90deg, #6ec2a8 0%, #b8ffe6 100%);
         transition: width 0.3s ease;
       }
 
       &:hover,
       &--active {
-        color: #00f5ff;
+        color: #b8ffe6;
 
         &::after {
           width: 100%;
@@ -188,7 +188,7 @@ interface NavItem {
         display: block;
         width: 100%;
         height: 2px;
-        background: #00f5ff;
+        background: #b8ffe6;
         transition: all 0.3s ease;
         transform-origin: center;
       }
@@ -212,7 +212,7 @@ interface NavItem {
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(10, 10, 15, 0.98);
+      background: rgba(15, 31, 29, 0.98);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -240,7 +240,7 @@ interface NavItem {
     }
 
     .navbar__mobile-link {
-      font-family: 'Orbitron', monospace;
+      font-family: 'Bebas Neue', monospace;
       font-size: 1.5rem;
       font-weight: 600;
       color: white;
@@ -255,8 +255,8 @@ interface NavItem {
       }
 
       &:hover {
-        color: #00f5ff;
-        text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+        color: #b8ffe6;
+        text-shadow: 0 0 20px rgba(184, 255, 230, 0.5);
       }
     }
 
@@ -277,7 +277,7 @@ export class NavbarComponent {
   navItems: NavItem[] = [
     { label: 'Home', href: '#hero' },
     { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
+    { label: 'Services', href: '#services' },
     { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' }
   ];
@@ -307,7 +307,7 @@ export class NavbarComponent {
   }
 
   private updateActiveSection(): void {
-    const sections = ['hero', 'about', 'skills', 'projects', 'contact'];
+    const sections = ['hero', 'about', 'services', 'projects', 'contact'];
 
     for (const section of sections) {
       const element = document.getElementById(section);

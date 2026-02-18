@@ -106,7 +106,7 @@ interface Project {
   `,
   styles: [`
     .projects {
-      background: linear-gradient(180deg, #12121a 0%, #0a0a0f 100%);
+      background: linear-gradient(180deg, #162b28 0%, #0f1f1d 100%);
       position: relative;
     }
 
@@ -152,16 +152,16 @@ interface Project {
       .image-placeholder {
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 100%);
+        background: linear-gradient(135deg, #223834 0%, #0f1f1d 100%);
         display: flex;
         align-items: center;
         justify-content: center;
 
         .project-number {
-          font-family: 'Orbitron', monospace;
+          font-family: 'Bebas Neue', monospace;
           font-size: 4rem;
           font-weight: 900;
-          color: rgba(0, 245, 255, 0.1);
+          color: rgba(184, 255, 230, 0.1);
         }
       }
 
@@ -171,7 +171,7 @@ interface Project {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(10, 10, 15, 0.9);
+        background: rgba(15, 31, 29, 0.9);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -189,10 +189,10 @@ interface Project {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: rgba(0, 245, 255, 0.1);
-          border: 1px solid rgba(0, 245, 255, 0.3);
+          background: rgba(184, 255, 230, 0.1);
+          border: 1px solid rgba(184, 255, 230, 0.3);
           border-radius: 50%;
-          color: #00f5ff;
+          color: #b8ffe6;
           transition: all 0.3s ease;
 
           svg {
@@ -201,9 +201,9 @@ interface Project {
           }
 
           &:hover {
-            background: rgba(0, 245, 255, 0.2);
+            background: rgba(184, 255, 230, 0.2);
             transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+            box-shadow: 0 0 20px rgba(184, 255, 230, 0.3);
           }
         }
       }
@@ -220,7 +220,7 @@ interface Project {
       flex-direction: column;
 
       .project-title {
-        font-family: 'Orbitron', monospace;
+        font-family: 'Bebas Neue', monospace;
         font-size: 1.25rem;
         font-weight: 600;
         color: white;
@@ -228,7 +228,7 @@ interface Project {
       }
 
       .project-description {
-        color: #a1a1aa;
+        color: #b6d8cc;
         font-size: 0.9rem;
         line-height: 1.6;
         margin-bottom: 1rem;
@@ -242,11 +242,11 @@ interface Project {
 
         .tech-tag {
           padding: 0.25rem 0.75rem;
-          background: rgba(191, 0, 255, 0.1);
+          background: rgba(110, 194, 168, 0.1);
           border-radius: 15px;
-          font-family: 'JetBrains Mono', monospace;
+          font-family: 'Courier Prime', monospace;
           font-size: 0.7rem;
-          color: #bf00ff;
+          color: #6ec2a8;
         }
       }
     }
@@ -283,7 +283,7 @@ export class ProjectsComponent {
     {
       id: '3',
       title: 'Portfolio Website',
-      description: 'Personal portfolio website with cyberpunk anime aesthetics, particle effects, and smooth animations.',
+      description: 'Personal portfolio website with retro-inspired aesthetics, particle effects, and smooth animations.',
       image: '',
       technologies: ['Angular', 'Tailwind CSS', 'SCSS', 'TypeScript'],
       githubUrl: 'https://github.com/puarin/portfolio',

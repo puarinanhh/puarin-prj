@@ -3,11 +3,11 @@
 // ============================================
 
 // === GOOGLE FONTS IMPORT ===
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:wght@400;700&family=Courier+Prime:wght@400;700&display=swap');
 
 // === BASE TYPOGRAPHY ===
 body {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -17,7 +17,7 @@ body {
 // === HEADINGS ===
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Orbitron', monospace;
+  font-family: 'Bebas Neue', sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -61,35 +61,35 @@ p {
 
 // === LINKS ===
 a {
-  color: #00f5ff;
+  color: #6ec2a8;
   text-decoration: none;
   transition: color 0.15s ease, text-shadow 0.15s ease;
 
   &:hover {
-    color: #67e8f9;
-    text-shadow: 0 0 10px rgba(0, 245, 255, 0.8), 0 0 20px rgba(0, 245, 255, 0.5);
+    color: #b8ffe6;
+    text-shadow: 0 0 8px rgba(110, 194, 168, 0.35);
   }
 }
 
 // === CODE ===
 code, pre {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Courier Prime', monospace;
 }
 
 code {
   padding: 0.2em 0.4em;
-  background: rgba(191, 0, 255, 0.1);
+  background: rgba(110, 194, 168, 0.14);
   border-radius: 4px;
   font-size: 0.9em;
-  color: #d946ef;
+  color: #b8ffe6;
 }
 
 pre {
   padding: 1.5rem;
-  background: #12121a;
+  background: #162b28;
   border-radius: 8px;
   overflow-x: auto;
-  border: 1px solid rgba(191, 0, 255, 0.3);
+  border: 1px solid rgba(110, 194, 168, 0.35);
 
   code {
     padding: 0;
@@ -99,47 +99,47 @@ pre {
 
 // === FONT FAMILIES ===
 .font-cyber {
-  font-family: 'Orbitron', monospace;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .font-body {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .font-mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Courier Prime', monospace;
 }
 
 // === TEXT COLORS ===
 .text-neon-cyan {
-  color: #00f5ff;
+  color: #b8ffe6;
 }
 
 .text-neon-purple {
-  color: #bf00ff;
+  color: #6ec2a8;
 }
 
 .text-neon-pink {
-  color: #ff0080;
+  color: #7ab8a2;
 }
 
 // === TEXT GRADIENT ===
 .text-gradient {
-  background: linear-gradient(90deg, #bf00ff 0%, #00f5ff 100%);
+  background: linear-gradient(90deg, #6ec2a8 0%, #b8ffe6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-purple-cyan {
-  background: linear-gradient(90deg, #bf00ff 0%, #00f5ff 100%);
+  background: linear-gradient(90deg, #6ec2a8 0%, #b8ffe6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-cyan-pink {
-  background: linear-gradient(90deg, #00f5ff 0%, #ff0080 100%);
+  background: linear-gradient(90deg, #b8ffe6 0%, #7ab8a2 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -147,9 +147,9 @@ pre {
 
 // === TEXT GLOW ===
 .text-glow-cyan {
-  text-shadow: 0 0 10px rgba(0, 245, 255, 0.8), 0 0 20px rgba(0, 245, 255, 0.5), 0 0 30px rgba(0, 245, 255, 0.3);
+  text-shadow: 0 0 8px rgba(184, 255, 230, 0.55), 0 0 16px rgba(184, 255, 230, 0.35);
 }
 
 .text-glow-purple {
-  text-shadow: 0 0 10px rgba(191, 0, 255, 0.8), 0 0 20px rgba(191, 0, 255, 0.5), 0 0 30px rgba(191, 0, 255, 0.3);
+  text-shadow: 0 0 8px rgba(110, 194, 168, 0.5), 0 0 14px rgba(110, 194, 168, 0.3);
 }

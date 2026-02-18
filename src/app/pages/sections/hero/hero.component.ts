@@ -100,7 +100,7 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      background: linear-gradient(135deg, #0a0a0f 0%, #12121a 100%);
+      background: linear-gradient(135deg, #0f1f1d 0%, #162b28 100%);
     }
 
     .cyber-grid {
@@ -110,8 +110,8 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
       right: 0;
       bottom: 0;
       background-image:
-        linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(184, 255, 230, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184, 255, 230, 0.03) 1px, transparent 1px);
       background-size: 50px 50px;
       pointer-events: none;
     }
@@ -122,7 +122,7 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(184, 255, 230, 0.3), transparent);
       animation: scanLine 8s linear infinite;
       pointer-events: none;
     }
@@ -141,21 +141,21 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
     }
 
     .hero__greeting {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Courier Prime', monospace;
       font-size: 1rem;
-      color: #a1a1aa;
+      color: #b6d8cc;
       margin-bottom: 1rem;
       opacity: 0;
       animation: fadeInUp 0.6s ease forwards;
 
       .bracket {
-        color: #00f5ff;
+        color: #b8ffe6;
       }
     }
 
     .hero__name {
       font-size: clamp(3rem, 12vw, 7rem);
-      font-family: 'Orbitron', monospace;
+      font-family: 'Bebas Neue', monospace;
       font-weight: 900;
       margin-bottom: 1rem;
       line-height: 1;
@@ -164,7 +164,7 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
     }
 
     :host ::ng-deep .text-gradient {
-      background: linear-gradient(135deg, #bf00ff 0%, #00f5ff 50%, #ff0080 100%);
+      background: linear-gradient(135deg, #6ec2a8 0%, #b8ffe6 50%, #7ab8a2 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -178,23 +178,23 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
     }
 
     .hero__role {
-      font-family: 'Orbitron', monospace;
+      font-family: 'Bebas Neue', monospace;
       font-size: clamp(1.25rem, 3vw, 1.75rem);
       margin-bottom: 1.5rem;
       opacity: 0;
       animation: fadeInUp 0.6s ease 0.4s forwards;
 
       .role-prefix {
-        color: #a1a1aa;
+        color: #b6d8cc;
       }
 
       .role-text {
-        color: #00f5ff;
-        text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+        color: #b8ffe6;
+        text-shadow: 0 0 20px rgba(184, 255, 230, 0.5);
       }
 
       .cursor {
-        color: #00f5ff;
+        color: #b8ffe6;
         font-weight: 100;
 
         &.blink {
@@ -210,7 +210,7 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
 
     .hero__description {
       font-size: 1.125rem;
-      color: #a1a1aa;
+      color: #b6d8cc;
       max-width: 600px;
       margin: 0 auto 2rem;
       line-height: 1.8;
@@ -241,7 +241,7 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #71717a;
+        color: #6f9388;
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 50%;
         transition: all 0.3s ease;
@@ -252,10 +252,10 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
         }
 
         &:hover {
-          color: #00f5ff;
-          border-color: #00f5ff;
+          color: #b8ffe6;
+          border-color: #b8ffe6;
           transform: translateY(-3px);
-          box-shadow: 0 0 20px rgba(0, 245, 255, 0.3);
+          box-shadow: 0 0 20px rgba(184, 255, 230, 0.3);
         }
       }
     }
@@ -273,24 +273,24 @@ import { ParticleBackgroundComponent } from '../../../shared/components/particle
       animation: fadeIn 1s ease 1.5s forwards;
 
       span {
-        font-family: 'Rajdhani', sans-serif;
+        font-family: 'PT Sans', sans-serif;
         font-size: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 0.2em;
-        color: #71717a;
+        color: #6f9388;
       }
 
       .scroll-icon {
         width: 24px;
         height: 40px;
-        border: 2px solid rgba(0, 245, 255, 0.3);
+        border: 2px solid rgba(184, 255, 230, 0.3);
         border-radius: 12px;
         position: relative;
 
         .scroll-wheel {
           width: 4px;
           height: 8px;
-          background: #00f5ff;
+          background: #b8ffe6;
           border-radius: 2px;
           position: absolute;
           top: 8px;

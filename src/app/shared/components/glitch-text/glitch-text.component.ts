@@ -39,13 +39,13 @@ import { CommonModule } from '@angular/common';
 
       &::before {
         left: 2px;
-        text-shadow: -2px 0 #ff0080;
+        text-shadow: -2px 0 #7ab8a2;
         animation: none;
       }
 
       &::after {
         left: -2px;
-        text-shadow: 2px 0 #00f5ff;
+        text-shadow: 2px 0 #b8ffe6;
         animation: none;
       }
     }

@@ -84,7 +84,7 @@ interface SkillCategory {
   `,
   styles: [`
     .skills {
-      background: #0a0a0f;
+      background: #0f1f1d;
       position: relative;
     }
 
@@ -105,12 +105,12 @@ interface SkillCategory {
         align-items: center;
         gap: 0.5rem;
         padding: 0.75rem 1.5rem;
-        font-family: 'Rajdhani', sans-serif;
+        font-family: 'PT Sans', sans-serif;
         font-size: 0.9rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        color: #71717a;
+        color: #6f9388;
         background: transparent;
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 30px;
@@ -131,15 +131,15 @@ interface SkillCategory {
         }
 
         &:hover {
-          color: #00f5ff;
-          border-color: rgba(0, 245, 255, 0.3);
+          color: #b8ffe6;
+          border-color: rgba(184, 255, 230, 0.3);
         }
 
         &.active {
-          color: #00f5ff;
-          background: rgba(0, 245, 255, 0.1);
-          border-color: rgba(0, 245, 255, 0.5);
-          box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+          color: #b8ffe6;
+          background: rgba(184, 255, 230, 0.1);
+          border-color: rgba(184, 255, 230, 0.5);
+          box-shadow: 0 0 20px rgba(184, 255, 230, 0.2);
         }
       }
     }
@@ -170,14 +170,14 @@ interface SkillCategory {
         margin-bottom: 0.75rem;
 
         .skill-name {
-          font-family: 'Rajdhani', sans-serif;
+          font-family: 'PT Sans', sans-serif;
           font-size: 1rem;
           font-weight: 600;
           color: white;
         }
 
         .skill-level {
-          font-family: 'Orbitron', monospace;
+          font-family: 'Bebas Neue', monospace;
           font-size: 0.875rem;
           font-weight: 600;
         }
@@ -215,7 +215,7 @@ interface SkillCategory {
 
       h3 {
         font-size: 1.25rem;
-        color: #71717a;
+        color: #6f9388;
         margin-bottom: 1.5rem;
         font-weight: 500;
       }
@@ -228,16 +228,16 @@ interface SkillCategory {
 
         .tech-tag {
           padding: 0.5rem 1rem;
-          background: rgba(191, 0, 255, 0.1);
-          border: 1px solid rgba(191, 0, 255, 0.2);
+          background: rgba(110, 194, 168, 0.1);
+          border: 1px solid rgba(110, 194, 168, 0.2);
           border-radius: 20px;
-          font-family: 'JetBrains Mono', monospace;
+          font-family: 'Courier Prime', monospace;
           font-size: 0.8rem;
-          color: #bf00ff;
+          color: #6ec2a8;
           transition: all 0.3s ease;
 
           &:hover {
-            background: rgba(191, 0, 255, 0.2);
+            background: rgba(110, 194, 168, 0.2);
             transform: translateY(-2px);
           }
         }

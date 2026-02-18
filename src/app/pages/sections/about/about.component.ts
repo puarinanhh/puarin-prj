@@ -86,7 +86,7 @@ interface Stat {
   `,
   styles: [`
     .about {
-      background: linear-gradient(180deg, #0a0a0f 0%, #12121a 100%);
+      background: linear-gradient(180deg, #0f1f1d 0%, #162b28 100%);
       position: relative;
     }
 
@@ -130,7 +130,7 @@ interface Stat {
         bottom: 0;
         border: 2px solid transparent;
         border-radius: 20px;
-        background: linear-gradient(135deg, #bf00ff 0%, #00f5ff 100%) border-box;
+        background: linear-gradient(135deg, #6ec2a8 0%, #b8ffe6 100%) border-box;
         -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
         mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
@@ -144,7 +144,7 @@ interface Stat {
         left: 10px;
         right: 10px;
         bottom: 10px;
-        background: linear-gradient(135deg, #1a1a2e 0%, #12121a 100%);
+        background: linear-gradient(135deg, #223834 0%, #162b28 100%);
         border-radius: 15px;
         display: flex;
         align-items: center;
@@ -152,10 +152,10 @@ interface Stat {
         overflow: hidden;
 
         .avatar-text {
-          font-family: 'Orbitron', monospace;
+          font-family: 'Bebas Neue', monospace;
           font-size: 6rem;
           font-weight: 900;
-          background: linear-gradient(135deg, #bf00ff 0%, #00f5ff 100%);
+          background: linear-gradient(135deg, #6ec2a8 0%, #b8ffe6 100%);
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -170,8 +170,8 @@ interface Stat {
         &--1 {
           width: 60px;
           height: 60px;
-          background: rgba(0, 245, 255, 0.1);
-          border: 1px solid rgba(0, 245, 255, 0.3);
+          background: rgba(184, 255, 230, 0.1);
+          border: 1px solid rgba(184, 255, 230, 0.3);
           top: -20px;
           right: -20px;
           animation: float 6s ease-in-out infinite;
@@ -180,8 +180,8 @@ interface Stat {
         &--2 {
           width: 40px;
           height: 40px;
-          background: rgba(191, 0, 255, 0.1);
-          border: 1px solid rgba(191, 0, 255, 0.3);
+          background: rgba(110, 194, 168, 0.1);
+          border: 1px solid rgba(110, 194, 168, 0.3);
           bottom: -10px;
           left: -10px;
           animation: float 6s ease-in-out infinite 1s;
@@ -217,13 +217,13 @@ interface Stat {
       }
 
       p {
-        color: #a1a1aa;
+        color: #b6d8cc;
         line-height: 1.8;
         margin-bottom: 1.25rem;
         font-size: 1.05rem;
 
         .highlight {
-          color: #00f5ff;
+          color: #b8ffe6;
           font-weight: 600;
         }
       }
@@ -250,7 +250,7 @@ interface Stat {
 
         .stat-value {
           display: block;
-          font-family: 'Orbitron', monospace;
+          font-family: 'Bebas Neue', monospace;
           font-size: 2.5rem;
           font-weight: 700;
           line-height: 1;
@@ -259,7 +259,7 @@ interface Stat {
 
         .stat-label {
           font-size: 0.875rem;
-          color: #71717a;
+          color: #6f9388;
           text-transform: uppercase;
           letter-spacing: 0.1em;
         }
@@ -274,18 +274,18 @@ interface Stat {
 
       .tag {
         padding: 0.5rem 1rem;
-        background: rgba(0, 245, 255, 0.1);
-        border: 1px solid rgba(0, 245, 255, 0.2);
+        background: rgba(184, 255, 230, 0.1);
+        border: 1px solid rgba(184, 255, 230, 0.2);
         border-radius: 20px;
-        font-family: 'JetBrains Mono', monospace;
+        font-family: 'Courier Prime', monospace;
         font-size: 0.8rem;
-        color: #00f5ff;
+        color: #b8ffe6;
         transition: all 0.3s ease;
 
         &:hover {
-          background: rgba(0, 245, 255, 0.2);
+          background: rgba(184, 255, 230, 0.2);
           transform: translateY(-2px);
-          box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+          box-shadow: 0 0 15px rgba(184, 255, 230, 0.2);
         }
       }
     }
@@ -293,9 +293,9 @@ interface Stat {
 })
 export class AboutComponent {
   stats: Stat[] = [
-    { value: '3+', label: 'Years Experience', color: '#00f5ff' },
-    { value: '20+', label: 'Projects Done', color: '#bf00ff' },
-    { value: '10+', label: 'Technologies', color: '#ff0080' }
+    { value: '3+', label: 'Years Experience', color: '#b8ffe6' },
+    { value: '20+', label: 'Projects Done', color: '#6ec2a8' },
+    { value: '10+', label: 'Technologies', color: '#7ab8a2' }
   ];
 
   technologies = [

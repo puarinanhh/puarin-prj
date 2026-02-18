@@ -26,7 +26,7 @@ import { CommonModule } from '@angular/common';
     button {
       position: relative;
       padding: 0.875rem 2rem;
-      font-family: 'Orbitron', monospace;
+      font-family: 'Bebas Neue', monospace;
       font-size: 0.875rem;
       font-weight: 600;
       letter-spacing: 0.1em;
@@ -60,17 +60,17 @@ import { CommonModule } from '@angular/common';
 
     // Primary variant (filled)
     .btn-primary {
-      background: linear-gradient(135deg, #bf00ff 0%, #00f5ff 100%);
+      background: linear-gradient(135deg, #6ec2a8 0%, #b8ffe6 100%);
       color: white;
 
       .btn-glow {
-        background: linear-gradient(135deg, #bf00ff 0%, #00f5ff 100%);
+        background: linear-gradient(135deg, #6ec2a8 0%, #b8ffe6 100%);
         filter: blur(15px);
       }
 
       &:hover:not(:disabled) {
         transform: translateY(-2px);
-        box-shadow: 0 0 30px rgba(0, 245, 255, 0.5), 0 0 60px rgba(191, 0, 255, 0.3);
+        box-shadow: 0 0 30px rgba(184, 255, 230, 0.5), 0 0 60px rgba(110, 194, 168, 0.3);
 
         .btn-glow {
           opacity: 0.5;
@@ -85,18 +85,18 @@ import { CommonModule } from '@angular/common';
     // Outline variant
     .btn-outline {
       background: transparent;
-      color: #00f5ff;
-      border: 2px solid #00f5ff;
+      color: #b8ffe6;
+      border: 2px solid #b8ffe6;
 
       .btn-glow {
-        background: #00f5ff;
+        background: #b8ffe6;
         filter: blur(15px);
       }
 
       &:hover:not(:disabled) {
-        background: rgba(0, 245, 255, 0.1);
+        background: rgba(184, 255, 230, 0.1);
         transform: translateY(-2px);
-        box-shadow: 0 0 20px rgba(0, 245, 255, 0.4), inset 0 0 20px rgba(0, 245, 255, 0.1);
+        box-shadow: 0 0 20px rgba(184, 255, 230, 0.4), inset 0 0 20px rgba(184, 255, 230, 0.1);
 
         .btn-glow {
           opacity: 0.3;
@@ -111,29 +111,29 @@ import { CommonModule } from '@angular/common';
     // Ghost variant
     .btn-ghost {
       background: transparent;
-      color: #a1a1aa;
+      color: #b6d8cc;
       border: 1px solid rgba(255, 255, 255, 0.1);
 
       &:hover:not(:disabled) {
-        color: #00f5ff;
-        border-color: rgba(0, 245, 255, 0.3);
-        background: rgba(0, 245, 255, 0.05);
+        color: #b8ffe6;
+        border-color: rgba(184, 255, 230, 0.3);
+        background: rgba(184, 255, 230, 0.05);
       }
     }
 
     // Pink variant
     .btn-pink {
-      background: linear-gradient(135deg, #ff0080 0%, #bf00ff 100%);
+      background: linear-gradient(135deg, #7ab8a2 0%, #6ec2a8 100%);
       color: white;
 
       .btn-glow {
-        background: linear-gradient(135deg, #ff0080 0%, #bf00ff 100%);
+        background: linear-gradient(135deg, #7ab8a2 0%, #6ec2a8 100%);
         filter: blur(15px);
       }
 
       &:hover:not(:disabled) {
         transform: translateY(-2px);
-        box-shadow: 0 0 30px rgba(255, 0, 128, 0.5), 0 0 60px rgba(191, 0, 255, 0.3);
+        box-shadow: 0 0 30px rgba(122, 184, 162, 0.5), 0 0 60px rgba(110, 194, 168, 0.3);
 
         .btn-glow {
           opacity: 0.5;

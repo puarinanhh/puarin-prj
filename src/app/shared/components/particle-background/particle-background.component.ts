@@ -57,7 +57,7 @@ export class ParticleBackgroundComponent implements AfterViewInit, OnDestroy {
   @Input() connectionDistance = 120;
   @Input() particleSpeed = 0.5;
   @Input() opacity = 1;
-  @Input() colors: string[] = ['#00f5ff', '#bf00ff', '#ff0080'];
+  @Input() colors: string[] = ['#b8ffe6', '#6ec2a8', '#7ab8a2'];
   @Input() interactive = true;
 
   private ctx!: CanvasRenderingContext2D | null;
